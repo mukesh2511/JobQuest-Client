@@ -1,0 +1,148 @@
+.featured {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  background: #013914;
+  color: white;
+
+  .container {
+    width: 1400px;
+    display: flex;
+    align-items: center;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      h1 {
+        font-size: 50px;
+
+        i {
+          font-weight: 300;
+        }
+      }
+      .search {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 5px;
+        .searchInput {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img {
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+          }
+          input {
+            border: none;
+            outline: none;
+          }
+        }
+        button {
+          width: 120px;
+          height: 50px;
+          border: none;
+          background-color: #1dbf73;
+          cursor: pointer;
+          color: white;
+          font-weight: bold;
+        }
+      }
+      .popular {
+        display: flex;
+        align-items: center;
+        color: white;
+        gap: 10px;
+
+        button {
+          background: transparent;
+          color: white;
+          outline: none;
+          border: 1px solid white;
+          padding: 5px 10px;
+          border-radius: 20px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+    }
+    .right {
+      height: 100%;
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .featured {
+    .container {
+      width: 100vw;
+      padding-left: 20px;
+
+      .left {
+        flex: 1;
+      }
+      .right {
+        flex: 1;
+        width: 100%;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 720px) {
+  .featured {
+    height: 500px;
+    .container {
+      width: 100vw;
+      padding-left: 20px;
+
+      .left {
+        flex: 1;
+
+        h1 {
+          font-size: 30px;
+        }
+
+        .popular {
+          button {
+            font-size: 8px;
+            padding: 5px;
+          }
+        }
+      }
+      .right {
+        flex: 1;
+        width: 100%;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .featured {
+    height: 400px;
+    .container {
+      padding-right: 20px;
+
+      .right {
+        display: none;
+      }
+    }
+  }
+}

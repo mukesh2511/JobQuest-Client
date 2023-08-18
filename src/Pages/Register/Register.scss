@@ -1,0 +1,92 @@
+.register {
+  display: flex;
+
+  justify-content: center;
+
+  .container {
+    width: 1200px;
+
+    margin: 50px 0;
+
+    form {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      .left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+
+        h1 {
+          color: gray;
+          font-size: 30px;
+        }
+
+        label {
+          font-size: 14px;
+          color: lightgray;
+        }
+
+        input {
+          outline: none;
+          padding: 12px;
+          border: 1px solid gray;
+        }
+
+        input[type="file"] {
+          border: 1px solid gray;
+        }
+        button {
+          outline: none;
+          border: none;
+          padding: 12px;
+          background-color: #1dbf73;
+          color: white;
+          font-size: bold;
+          cursor: pointer;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          input {
+            width: 30px;
+            height: 20px;
+          }
+        }
+
+        h1 {
+          color: gray;
+          font-size: 30px;
+        }
+
+        label {
+          font-size: 14px;
+          color: lightgray;
+        }
+
+        input {
+          padding: 12px;
+          border: 1px solid gray;
+        }
+        textarea {
+          padding: 5px;
+        }
+      }
+    }
+    h2 {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 15px;
+      color: red;
+    }
+  }
+}

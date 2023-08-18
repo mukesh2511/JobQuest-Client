@@ -1,0 +1,164 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #013914;
+  color: white;
+  position: sticky;
+  top: 0;
+  transition: 0.7s all ease;
+  z-index: 999;
+  &.active {
+    background: white;
+    color: black;
+  }
+
+  .container {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    .logo {
+      font-size: 34px;
+      font-weight: bold;
+
+      .dot {
+        color: #1dbf76;
+      }
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        position: relative;
+
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .options {
+          position: absolute;
+          top: 55px;
+          border-radius: 10px;
+          padding: 20px;
+          right: 0;
+          border: 1px solid lightgray;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          background: white;
+          color: gray;
+          width: 200px;
+          font-weight: 300;
+
+          span {
+            border-radius: 10px;
+            transition: 0.7s all ease;
+            &:hover {
+              background: #013914;
+              color: white;
+              padding: 10px 5px;
+            }
+          }
+        }
+      }
+
+      button {
+        color: #1dbf76;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: max-content;
+        border: 1px solid white;
+        cursor: pointer;
+        background-color: transparent;
+        border-color: #1dbf76;
+
+        &:hover {
+          background-color: #013914;
+          border-color: #1dbf76;
+        }
+      }
+    }
+  }
+  hr {
+    width: 100%;
+    height: 0;
+    border: 0.5px solid rgb(228, 227, 227);
+  }
+  .menu {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-weight: 300;
+    color: gray;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+    .container {
+      width: 100vw;
+      margin-right: 10px;
+      .logo {
+        margin-left: 15px;
+      }
+      .user {
+        margin-right: 15px;
+      }
+      .links {
+        span:nth-child(3) {
+          display: none;
+        }
+        span:nth-child(5) {
+          display: none;
+        }
+
+        .user {
+          .options {
+            position: fixed;
+            top: 80px;
+          }
+        }
+      }
+    }
+    .menu {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    .container {
+      .logo {
+        font-size: 25px;
+        font-weight: bold;
+
+        .dot {
+          color: #1dbf76;
+        }
+      }
+      .links {
+        font-size: 15px;
+        span:nth-child(1) {
+          display: none;
+        }
+      }
+    }
+  }
+}
