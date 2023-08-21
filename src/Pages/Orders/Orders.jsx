@@ -54,13 +54,13 @@ const Orders = () => {
               </tr>
             </thead>
             <tbody>
-              {data.map((order) => (
-                <tr key={order._id}>
+              {data?.map((order) => (
+                <tr key={order?._id}>
                   <td>
-                    <img className="img" src={order.img} alt="" />
+                    <img className="img" src={order?.img} alt="" />
                   </td>
-                  <td>{order.title}</td>
-                  <td>{order.price}</td>
+                  <td>{order?.title}</td>
+                  <td>{order?.price}</td>
                   <td>
                     <img
                       className="delete"

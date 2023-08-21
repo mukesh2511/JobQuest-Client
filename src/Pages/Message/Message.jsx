@@ -47,7 +47,7 @@ const Message = () => {
           "Something went wrong"
         ) : (
           <div className="messages">
-            {data.map((m) => (
+            {data?.map((m) => (
               <div
                 className={m.userId === currentUser._id ? "owner item" : "item"}
                 key={m._id}
