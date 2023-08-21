@@ -6,9 +6,10 @@ import Slide from "../../components/slide/Slide.jsx";
 import { cards, projects } from "../../data.js";
 import CatCard from "../../components/catCard/CatCard";
 import ProjectCard from "../../components/projectCard/ProjectCard";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="home">
       <Featured />
@@ -18,100 +19,93 @@ const Home = () => {
       </div>
       <Slide slidesToShow={5} arrowsScroll={5}>
         {cards.map((card) => (
-          <CatCard item={card} key={card.id} />
+          <CatCard card={card} key={card.id} />
         ))}
       </Slide>
       <div className="gigcats">
-        <Link to={`/gigs?cat=design`}>
-          <div className="catitem">
-            <img
-              src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161247/ai-artists-2x.png"
-              alt=""
-            />
-            <span className="desc">Add talent to AI</span>
-            <span className="title">AI Design</span>
-          </div>
-        </Link>
-        <Link to={`/gigs?cat=logo`}>
-          <div className="catitem">
-            <img
-              src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161257/logo-design-2x.png"
-              alt=""
-            />
-            <span className="desc">Buils your brand</span>
-            <span className="title">Logo Design</span>
-          </div>
-        </Link>
-        <Link to={`/gigs?cat=ui`}>
-          <div className="catitem">
-            <img
-              src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161257/wordpress-2x.png"
-              alt=""
-            />
-            <span className="desc">Customize your site</span>
-            <span className="title">WordPress</span>
-          </div>
-        </Link>
-        <Link to={`/gigs?cat=message`}>
-          <div className="catitem">
-            <img
-              src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161253/voice-over-2x.png"
-              alt=""
-            />
-            <span className="desc">Share your message</span>
-            <span className="title">Voice Over</span>
-          </div>
-        </Link>
-        <Link to={`/gigs?cat=video`}>
-          <div className="catitem">
-            <img
-              src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161245/animated-explainer-2x.png"
-              alt="book img"
-            />
-            <span className="desc">Engage your audience</span>
-            <span className="title">Video Explainer</span>
-          </div>
-        </Link>
-        <Link to={`/gigs?cat=social`}>
-          <div className="catitem">
-            <img
-              src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161249/social-2x.png"
-              alt="book img"
-            />
-            <span className="desc">Reach more Customers</span>
-            <span className="title">Social Media</span>
-          </div>
-        </Link>
-        <Link to={`/gigs?cat=seo`}>
-          <div className="catitem">
-            <img
-              src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/27f914ed7984fdd2d55aa1fb5e74bd6a-1690384243592/seo-2x.png"
-              alt="book img"
-            />
-            <span className="desc">Unlock growth online</span>
-            <span className="title">SEO</span>
-          </div>
-        </Link>
-        <Link to={`/gigs?cat=illustrate`}>
-          <div className="catitem">
-            <img
-              src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161236/illustration-2x.png"
-              alt="book img"
-            />
-            <span className="desc">Color your dreams</span>
-            <span className="title">IIlustration</span>
-          </div>
-        </Link>
-        <Link to={`/gigs?cat=design`}>
-          <div className="catitem">
-            <img
-              src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161247/translation-2x.png"
-              alt="book img"
-            />
-            <span className="desc">Go global</span>
-            <span className="title">Translation</span>
-          </div>
-        </Link>
+        <div className="catitem" onClick={() => navigate(`/gigs?cat=design`)}>
+          <img
+            src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161247/ai-artists-2x.png"
+            alt=""
+          />
+          <span className="desc">Add talent to AI</span>
+          <span className="title">AI Design</span>
+        </div>
+
+        <div className="catitem" onClick={() => navigate("/gigs?cat=logo")}>
+          <img
+            src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161257/logo-design-2x.png"
+            alt=""
+          />
+          <span className="desc">Buils your brand</span>
+          <span className="title">Logo Design</span>
+        </div>
+
+        <div className="catitem" onClick={() => navigate(`/gigs?cat=ui`)}>
+          <img
+            src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161257/wordpress-2x.png"
+            alt=""
+          />
+          <span className="desc">Customize your site</span>
+          <span className="title">WordPress</span>
+        </div>
+
+        <div className="catitem" onClick={() => navigate(`/gigs?cat=message`)}>
+          <img
+            src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161253/voice-over-2x.png"
+            alt=""
+          />
+          <span className="desc">Share your message</span>
+          <span className="title">Voice Over</span>
+        </div>
+
+        <div className="catitem" onClick={() => navigate(`/gigs?cat=video`)}>
+          <img
+            src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161245/animated-explainer-2x.png"
+            alt="book img"
+          />
+          <span className="desc">Engage your audience</span>
+          <span className="title">Video Explainer</span>
+        </div>
+
+        <div className="catitem" onClick={() => navigate(`/gigs?cat=social`)}>
+          <img
+            src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161249/social-2x.png"
+            alt="book img"
+          />
+          <span className="desc">Reach more Customers</span>
+          <span className="title">Social Media</span>
+        </div>
+
+        <div className="catitem" onClick={() => navigate(`/gigs?cat=seo`)}>
+          <img
+            src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/27f914ed7984fdd2d55aa1fb5e74bd6a-1690384243592/seo-2x.png"
+            alt="book img"
+          />
+          <span className="desc">Unlock growth online</span>
+          <span className="title">SEO</span>
+        </div>
+
+        <div
+          className="catitem"
+          onClick={() => navigate(`/gigs?cat=illustrate`)}
+        >
+          <img
+            src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161236/illustration-2x.png"
+            alt="book img"
+          />
+          <span className="desc">Color your dreams</span>
+          <span className="title">IIlustration</span>
+        </div>
+
+        <div className="catitem" onClick={() => navigate(`/gigs?cat=design`)}>
+          <img
+            src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161247/translation-2x.png"
+            alt="book img"
+          />
+          <span className="desc">Go global</span>
+          <span className="title">Translation</span>
+        </div>
       </div>
       <div className="features">
         <div className="container">
