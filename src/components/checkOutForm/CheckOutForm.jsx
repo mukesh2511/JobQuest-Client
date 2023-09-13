@@ -6,6 +6,7 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 import { useNavigate } from "react-router-dom";
+import "./CheckoutForm.scss";
 
 const CheckoutForm = () => {
   const stripe = useStripe();
