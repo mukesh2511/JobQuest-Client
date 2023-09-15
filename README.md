@@ -1,10 +1,10 @@
-# myDiary
+# JobQuest
 
 This is a MERN stack Freelancer Website.
 
 ## Project Description
 
-This website's central feature is users registered as sellers  can create a GIG. Other users can apply for various jobs available. There is real-time chat support.
+This is the job searching website where users can register as a job finder or Job provider, post new jobs, and sell courses. Users can rate the gig, and comment on the gig. Also, the highlighting feature is there is real-time chat support.
 ## Features
 
 CRUD operation on gigs and users, real-time chat support, rating a user or a gig.
@@ -14,6 +14,7 @@ CRUD operation on gigs and users, real-time chat support, rating a user or a gig
 ## Screenshots
 
 - Home page
+
 ![Screenshot 1](https://github.com/mukesh2511/JobQuest-Client/blob/master/images/Untitled-1.png)
 
 
